@@ -1,40 +1,22 @@
-Below are the steps to get your plugin running. You can also find instructions at:
+I followed the tutorial on the Figma Website related to bundling with Webpack:
+https://www.figma.com/plugin-docs/bundling-webpack/
 
-  https://www.figma.com/plugin-docs/setup/
+I completed all the steps.
 
-This plugin template uses Typescript and NPM, two standard tools in creating JavaScript applications.
+When I get to the last step to run the code, running either command
 
-First, download Node.js which comes with NPM. This will allow you to install TypeScript and other
-libraries. You can find the download link here:
+npx webpack --mode=development --watch
+OR
+npx webpack --mode=production
 
-  https://nodejs.org/en/download/
+I get the error:
 
-Next, install TypeScript using the command:
+ERROR in TypeError: Cannot read property 'source' of undefined
 
-  npm install -g typescript
+It looks like the tutorial may be broken/old. Help would be appreciated!
 
-Finally, in the directory of your plugin, get the latest type definitions for the plugin API by running:
+I attached the error for reference.
 
-  npm install --save-dev @figma/plugin-typings
+https://p23.zdusercontent.com/attachment/9325143/CC6R8g862X4Wfpo5pzmc77NJs?token=eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..1zjv_PN-fn6adreu90knNg.cdc4TEiZYDObULNlLzBq-ewjUaGeOdz81jr4wK6T-UYPkUUb1DQORbKOMb0a3X_Df_EArQJZ18PCUbkKXvH2wAyEK5nYfyy_CkTb_JOBg6O0uLe5zwAIiaT7pVhxetRmUDvksULBHs9CWqR6mfePo7ApUTf96BISVx8Cyug3E6zRcEuYIfKNmTnXmdwnz4PTXy1k79PY8Yr9rtrGQs_dnEotLdI8SsnJERsrAKTEmRyR1LXtlcotJykWNbn_ctans2C9BjrJy6wkQdYai6zNo6vrALKc9HESCJQKZuIUq4E.SpC4cQfowrZFpV9yenParw
 
-If you are familiar with JavaScript, TypeScript will look very familiar. In fact, valid JavaScript code
-is already valid Typescript code.
-
-TypeScript adds type annotations to variables. This allows code editors such as Visual Studio Code
-to provide information about the Figma API while you are writing code, as well as help catch bugs
-you previously didn't notice.
-
-For more information, visit https://www.typescriptlang.org/
-
-Using TypeScript requires a compiler to convert TypeScript (code.ts) into JavaScript (code.js)
-for the browser to run.
-
-We recommend writing TypeScript code using Visual Studio code:
-
-1. Download Visual Studio Code if you haven't already: https://code.visualstudio.com/.
-2. Open this directory in Visual Studio Code.
-3. Compile TypeScript to JavaScript: Run the "Terminal > Run Build Task..." menu item,
-    then select "tsc: watch - tsconfig.json". You will have to do this again every time
-    you reopen Visual Studio Code.
-
-That's it! Visual Studio Code will regenerate the JavaScript file every time you save.
+Just for context, I use GitBash on Windows.
