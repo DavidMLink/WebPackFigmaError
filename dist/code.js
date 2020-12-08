@@ -1,0 +1,1 @@
+figma.showUI(__html__),figma.ui.onmessage=e=>{if("create-rectangles"===e.type){const t=[];for(let a=0;a<e.count;a++){const e=figma.createRectangle();e.x=150*a,e.fills=[{type:"SOLID",color:{r:1,g:.5,b:0}}],figma.currentPage.appendChild(e),t.push(e)}figma.currentPage.selection=t,figma.viewport.scrollAndZoomIntoView(t)}figma.closePlugin()};
